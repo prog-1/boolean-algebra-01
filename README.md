@@ -2,7 +2,7 @@
 
 ## Truth Table
 
-You are given the following situation:
+You are given the following claims:
 
 > If Jones did not meet Smith last night (A), then either Smith was a
 > murderer (B), or Jones is telling a lie (C). If Smith was not a murderer,
@@ -10,9 +10,9 @@ You are given the following situation:
 > then either Smith was a murderer, or Jones is telling a lie, but
 > not both.
 
-`A`, `B`, `C` and `D` are variables d. Write a Boolean expression that describes the combination of arguments using a proposition.
+`A`, `B`, `C` and `D` are variables describing basic propositions in the claim. Write a Boolean proposition that describes the combination of claims using `A`, `B`, `C` and `D`.
 
-Describe the proposition using a function declared as `func proposition(a, b, c, d bool) bool`. Write tests for the function.
+Describe the claim using a function declared as `func proposition(a, b, c, d bool) bool`. Write tests for the function.
 
 Write `main()` that calls the function `proposition` and prints the truth table, e.g.
 
