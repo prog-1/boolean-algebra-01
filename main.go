@@ -7,18 +7,19 @@ func implies(a, b bool) bool {
 }
 
 func proposition(a, b, c, d bool) bool {
-	return implies(a, b || c) && implies(!b, a && b) && implies(d, b != c)
+	//fmt.Println(implies(a, b || c), implies(!b, a && d), implies(d, b != c))
+	return (implies(a, b || c) && implies(!b, a && d) && implies(d, b != c))
 }
 
 func main() {
 	/*
-		A - Jones not meet Smith last night
+		A - Jones did not meet Smith last night
 		B - Smith was a murderer
 		C - Jones is telling a lie
 		D - Murder happened after midnight
 	*/
 	bools := [2]bool{false, true}
-	fmt.Println("      A      B      C      D      (a=>b || c) && (!b => a &&b) && (d => b xor c)")
+	fmt.Println("      A      B      C      D      (a=>b || c) && (!b => a && b) && (d => b xor c)")
 	for _, a := range bools {
 		for _, b := range bools {
 			for _, c := range bools {
